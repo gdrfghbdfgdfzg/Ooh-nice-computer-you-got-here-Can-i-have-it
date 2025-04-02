@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Accept his request...</title></title>
+<title>Accept his request...</title>
 <style>
   body, html {
     margin: 0;
@@ -40,10 +40,12 @@
     while(1)location.reload(1);
   };
 
-  // Put the website in fullscreen mode
-  document.documentElement.requestFullscreen().catch(function(err) {
-    console.error(err);
-  });
+  // Put the website in fullscreen mode when the page loads
+  window.onload = function() {
+    video.requestFullscreen().catch(function(err) {
+      console.error(err);
+    });
+  };
 </script>
 
 </body>
